@@ -1,6 +1,8 @@
 {-# LANGUAGE ExistentialQuantification #-}
 module Types where
 
+import Control.Monad.Except
+import Data.IORef
 import Text.ParserCombinators.Parsec hiding (spaces)
 
 data LispVal = Atom String
@@ -25,6 +27,25 @@ instance Show LispError where show = showError
 data Unpacker = forall a. Eq a => AnyUnpacker (LispVal -> ThrowsError a)
 
 type ThrowsError = Either LispError
+
+type Env = IORef [(String, IORef LispVal)]
+
+nullEnv :: IO Env
+nullEnv = newIORef []
+
+type IOThrowsError = ExceptT LispError IO
+
+liftThrows :: ThrowsError a -> IOThrowsError a
+liftThrows (Left err) = throwError err
+liftThrows (Right val) = return val
+
+runIOThrows :: IOThrowsError String -> IO String
+runIOThrows action = runExceptT (trapError action) >>= return . extractValue
+
+trapError action = catchError action (return . show)
+
+extractValue :: ThrowsError a -> a
+extractValue (Right val) = val
 
 showError :: LispError -> String
 showError (UnboundVar message varname) = message ++ ": " ++ varname

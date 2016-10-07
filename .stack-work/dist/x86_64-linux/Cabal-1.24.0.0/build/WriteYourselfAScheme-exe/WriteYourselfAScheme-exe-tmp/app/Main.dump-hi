@@ -1,0 +1,310 @@
+
+==================== FINAL INTERFACE ====================
+2016-10-07 08:14:27.66874065 UTC
+
+interface main@main:Main 8001
+  interface hash: b5629d03e93833ea43cf2cd75f08ddb8
+  ABI hash: 3c8b876abaff0beb0eeb54a3e2e3bd69
+  export-list hash: d6d4e9877c13002d1895c0d02350eecd
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: 3503c0f12d914fe65ea67be85cf34994
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Main.evalAndPrint
+  Main.evalString
+  Main.flushStr
+  Main.main
+  Main.readPrompt
+  Main.runRepl
+  Main.until_
+module dependencies:
+package dependencies: WriteYourselfAScheme-0.1.0.0@WriteYourselfAScheme-0.1.0.0-9XCnyXZ9nZK8zfaQQc7IOM
+                      array-0.5.1.1@array-0.5.1.1 base-4.9.0.0*
+                      binary-0.8.3.0@binary-0.8.3.0
+                      bytestring-0.10.8.1@bytestring-0.10.8.1
+                      containers-0.5.7.1@containers-0.5.7.1
+                      deepseq-1.4.2.0@deepseq-1.4.2.0 ghc-prim-0.5.0.0
+                      integer-gmp-1.0.0.1 mtl-2.2.1@mtl-2.2.1-6qsR1PHUy5lL47Hpoa4jCM
+                      parsec-3.1.11@parsec-3.1.11-IYEP8Lv1S9x5FeUQxGPDBY
+                      text-1.2.2.1@text-1.2.2.1-FgcR4Xf0VlEHD9HLxzq9WJ
+                      transformers-0.5.2.0@transformers-0.5.2.0
+orphans: base-4.9.0.0:GHC.Base base-4.9.0.0:GHC.Float
+         binary-0.8.3.0@binary-0.8.3.0:Data.Binary.Generic
+         bytestring-0.10.8.1@bytestring-0.10.8.1:Data.ByteString.Builder
+         text-1.2.2.1@text-1.2.2.1-FgcR4Xf0VlEHD9HLxzq9WJ:Data.Text
+         text-1.2.2.1@text-1.2.2.1-FgcR4Xf0VlEHD9HLxzq9WJ:Data.Text.Lazy
+         text-1.2.2.1@text-1.2.2.1-FgcR4Xf0VlEHD9HLxzq9WJ:Data.Text.Show
+         transformers-0.5.2.0@transformers-0.5.2.0:Control.Monad.Trans.Error
+family instance modules: base-4.9.0.0:Control.Applicative
+                         base-4.9.0.0:Data.Complex base-4.9.0.0:Data.Either
+                         base-4.9.0.0:Data.Functor.Const base-4.9.0.0:Data.Functor.Identity
+                         base-4.9.0.0:Data.List.NonEmpty base-4.9.0.0:Data.Monoid
+                         base-4.9.0.0:Data.Semigroup base-4.9.0.0:Data.Type.Equality
+                         base-4.9.0.0:Data.Version base-4.9.0.0:Data.Void
+                         base-4.9.0.0:GHC.Exts base-4.9.0.0:GHC.Generics
+                         base-4.9.0.0:GHC.IO.Exception base-4.9.0.0:GHC.TypeLits
+                         containers-0.5.7.1@containers-0.5.7.1:Data.IntMap.Base
+                         containers-0.5.7.1@containers-0.5.7.1:Data.IntSet.Base
+                         containers-0.5.7.1@containers-0.5.7.1:Data.Map.Base
+                         containers-0.5.7.1@containers-0.5.7.1:Data.Sequence
+                         containers-0.5.7.1@containers-0.5.7.1:Data.Set.Base
+                         text-1.2.2.1@text-1.2.2.1-FgcR4Xf0VlEHD9HLxzq9WJ:Data.Text
+                         text-1.2.2.1@text-1.2.2.1-FgcR4Xf0VlEHD9HLxzq9WJ:Data.Text.Lazy
+import  -/  WriteYourselfAScheme-0.1.0.0@WriteYourselfAScheme-0.1.0.0-9XCnyXZ9nZK8zfaQQc7IOM:Lib 7faad04afa208b7ce399053dc5fa5e93
+import  -/  base-4.9.0.0:Control.Monad 7767aebfd53f0b584cef2fe66ad3986c
+import  -/  base-4.9.0.0:Data.Foldable 8aeb682f6c74f97fcf0ace0d608a43ea
+import  -/  base-4.9.0.0:GHC.Base 8ed3be81c0707b322f975a84ae1bb816
+import  -/  base-4.9.0.0:GHC.IO.Handle a1938753d58593f0a419f85b67aa7cd3
+import  -/  base-4.9.0.0:GHC.IO.Handle.FD adf0145182d1c6eb38b2b8ce5a292e84
+import  -/  base-4.9.0.0:GHC.List 13d2451194c1c6e53b4f4f07947736dd
+import  -/  base-4.9.0.0:GHC.Show 952347a6ab730bcb25c0854d8bc6ca51
+import  -/  base-4.9.0.0:Prelude b9bddb97799837fe67a8d00939a5b6c3
+import  -/  base-4.9.0.0:System.Environment ee0914a962f5508d0fd404c89ee4999b
+import  -/  base-4.9.0.0:System.IO eb1d40aa793a4047069a5023f2ebcfe3
+import  -/  ghc-prim-0.5.0.0:GHC.Classes 0bdf3d057a415ec1b84a7b1994efbe47
+import  -/  ghc-prim-0.5.0.0:GHC.Types 7378e41b7749213c8c88ceb6b0665d4c
+d6831ef04cb9301b090dfae6f7bb7ec7
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module Main.$trModule2 Main.$trModule1) -}
+847d9fc3b8e6f0b424199f36b4999bb2
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "Main"#) -}
+24ef6042833e75ffd7aa98b83ecca98d
+  $trModule2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "main"#) -}
+d65cc8754704fe0e8279a8c2c4d98152
+  evalAndPrint :: GHC.Base.String -> GHC.Types.IO ()
+  {- Arity: 2, Strictness: <L,U><S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Main.evalAndPrint1
+                  `cast`
+                (<GHC.Base.String>_R ->_R Sym (GHC.Types.N:IO[0] <()>_R)) -}
+2bf6d55c53b21be6c5ddfc7336499581
+  evalAndPrint1 ::
+    GHC.Base.String
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 2, Strictness: <L,U><S,U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (expr :: GHC.Base.String)
+                   (s :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 case Main.evalAndPrint2 expr s of ds1 { (#,#) ipv ipv1 ->
+                 GHC.IO.Handle.Text.hPutStr2
+                   GHC.IO.Handle.FD.stdout
+                   ipv1
+                   GHC.Types.True
+                   ipv }) -}
+cf358928fb4773d22871c4067e915e0e
+  evalAndPrint2 ::
+    GHC.Base.String
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, [GHC.Types.Char] #)
+  {- Arity: 2, Strictness: <L,U><S,U>,
+     Unfolding: (\ (expr :: GHC.Base.String)
+                   (s :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 (# s,
+                    case (Text.Parsec.Prim.runPT
+                            @ GHC.Base.String
+                            @ Data.Functor.Identity.Identity
+                            @ GHC.Types.Char
+                            @ ()
+                            @ Types.LispVal
+                            (Lib.$s$fStream[]mtok @ GHC.Types.Char)
+                            Lib.parseDottedList7
+                              `cast`
+                            (Sym (Text.Parsec.Prim.N:ParsecT[0]
+                                      <GHC.Base.String>_R
+                                      <()>_R
+                                      <Data.Functor.Identity.Identity>_R
+                                      <Types.LispVal>_R))
+                            GHC.Tuple.()
+                            Lib.readExpr1
+                            expr)
+                           `cast`
+                         (Data.Functor.Identity.N:Identity[0]
+                              <Data.Either.Either
+                                 Text.Parsec.Error.ParseError Types.LispVal>_R) of wild {
+                      Data.Either.Left err -> Types.showError (Types.Parser err)
+                      Data.Either.Right val
+                      -> case Lib.eval val of wild1 {
+                           Data.Either.Left x -> Types.showError x
+                           Data.Either.Right y -> Types.showVal y } } #)) -}
+192b9ddb38bd13c5e1b9e1f5a3b26790
+  evalString :: GHC.Base.String -> GHC.Types.IO GHC.Base.String
+  {- Arity: 2, Strictness: <L,U><S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Main.evalAndPrint2
+                  `cast`
+                (<GHC.Base.String>_R
+                 ->_R Sym (GHC.Types.N:IO[0] <[GHC.Types.Char]>_R)) -}
+fd699741f1f99255190363c123d983d0
+  flushStr :: GHC.Base.String -> GHC.Types.IO ()
+  {- Arity: 2, Strictness: <L,1*U><S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Main.flushStr1
+                  `cast`
+                (<GHC.Base.String>_R ->_R Sym (GHC.Types.N:IO[0] <()>_R)) -}
+9d84eee9eed08c391b1f84850253a86a
+  flushStr1 ::
+    GHC.Base.String
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 2, Strictness: <L,1*U><S,U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (str :: GHC.Base.String)
+                   (eta :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 case GHC.IO.Handle.Text.hPutStr2
+                        GHC.IO.Handle.FD.stdout
+                        str
+                        GHC.Types.False
+                        eta of ds1 { (#,#) ipv ipv1 ->
+                 GHC.IO.Handle.Internals.wantWritableHandle1
+                   @ ()
+                   GHC.IO.Handle.hFlush2
+                   GHC.IO.Handle.FD.stdout
+                   GHC.IO.Handle.Internals.flushWriteBuffer1
+                     `cast`
+                   (<GHC.IO.Handle.Types.Handle__>_R
+                    ->_R Sym (GHC.Types.N:IO[0] <()>_R))
+                   ipv }) -}
+f19cd15eb102b83625fdcdebfdab348a
+  main :: GHC.Types.IO ()
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Main.main1 `cast` (Sym (GHC.Types.N:IO[0] <()>_R)) -}
+b8da5b3651ef3de756cb9a4fbcf312c3
+  main1 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: (\ (s :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 case System.Environment.getArgs1 s of ds1 { (#,#) ipv ipv1 ->
+                 case GHC.List.$wlenAcc @ [GHC.Types.Char] ipv1 0# of ww2 {
+                   DEFAULT
+                   -> GHC.IO.Handle.Text.hPutStr2
+                        GHC.IO.Handle.FD.stdout
+                        Main.main8
+                        GHC.Types.True
+                        ipv
+                   0#
+                   -> Main.main7
+                        @ [GHC.Types.Char]
+                        Main.main5
+                        Main.main2 `cast` (Sym (GHC.Types.N:IO[0] <GHC.Base.String>_R))
+                        Main.evalAndPrint1
+                          `cast`
+                        (<GHC.Base.String>_R ->_R Sym (GHC.Types.N:IO[0] <()>_R))
+                        ipv
+                   1#
+                   -> case Main.evalAndPrint2
+                             (GHC.List.head @ GHC.Base.String ipv1)
+                             ipv of ds2 { (#,#) ipv2 ipv3 ->
+                      GHC.IO.Handle.Text.hPutStr2
+                        GHC.IO.Handle.FD.stdout
+                        ipv3
+                        GHC.Types.True
+                        ipv2 } } }) -}
+d28af76b7c8fc213522f5f33aeabd9b4
+  main2 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, GHC.Base.String #)
+  {- Arity: 1, Unfolding: (Main.main4 Main.main3) -}
+71f238ea67576f16a0db3646bcba7f43
+  main3 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "Lisp>>> "#) -}
+7a57d420bfe47719626d6a20efa58bdb
+  main4 ::
+    GHC.Base.String
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, GHC.Base.String #)
+  {- Arity: 2, Strictness: <L,1*U><S,U>,
+     Unfolding: (\ (prompt :: GHC.Base.String)
+                   (eta :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 case GHC.IO.Handle.Text.hPutStr2
+                        GHC.IO.Handle.FD.stdout
+                        prompt
+                        GHC.Types.False
+                        eta of ds1 { (#,#) ipv ipv1 ->
+                 case GHC.IO.Handle.Internals.wantWritableHandle1
+                        @ ()
+                        GHC.IO.Handle.hFlush2
+                        GHC.IO.Handle.FD.stdout
+                        GHC.IO.Handle.Internals.flushWriteBuffer1
+                          `cast`
+                        (<GHC.IO.Handle.Types.Handle__>_R
+                         ->_R Sym (GHC.Types.N:IO[0] <()>_R))
+                        ipv of ds2 { (#,#) ipv2 ipv3 ->
+                 System.IO.getLine1 ipv2 } }) -}
+7549ceca69e8f23856ffe6e33a892ec5
+  main5 :: [GHC.Types.Char] -> GHC.Types.Bool
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: [GHC.Types.Char]) -> GHC.Base.eqString ds Main.main6) -}
+e31b3ad5ce3e6500214d5b6ab9357726
+  main6 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "quit"#) -}
+f18cb7541b1bb9f38ee0714b85e3d1fa
+  main7 ::
+    (a -> GHC.Types.Bool)
+    -> GHC.Types.IO a
+    -> (a -> GHC.Types.IO ())
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 4, HasNoCafRefs,
+     Strictness: <L,C(U)><C(S(SL)),C(U(U,U))><L,C(C1(U(U,A)))><S,U> -}
+ffc7f228c4740dbccf74eda304388ef5
+  main8 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "Program takes only 0 or 1 argument"#) -}
+b8ef21eeb8314a0dc761c539b1576abb
+  main9 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 1,
+     Unfolding: (GHC.TopHandler.runMainIO1
+                   @ ()
+                   Main.main1 `cast` (Sym (GHC.Types.N:IO[0] <()>_R))) -}
+2615fbd0aa26c85c706107f2cd372a4f
+  readPrompt :: GHC.Base.String -> GHC.Types.IO GHC.Base.String
+  {- Arity: 2, Strictness: <L,1*U><S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Main.main4
+                  `cast`
+                (<GHC.Base.String>_R
+                 ->_R Sym (GHC.Types.N:IO[0] <GHC.Base.String>_R)) -}
+ca3e46460d2096a3d3028725e5ddff87
+  runRepl :: GHC.Types.IO ()
+  {- Arity: 1,
+     Unfolding: InlineRule (0, True, True)
+                Main.runRepl1 `cast` (Sym (GHC.Types.N:IO[0] <()>_R)) -}
+a9d4431fc8a14e4f34595994e9e9f19e
+  runRepl1 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 1,
+     Unfolding: (Main.main7
+                   @ [GHC.Types.Char]
+                   Main.main5
+                   Main.main2 `cast` (Sym (GHC.Types.N:IO[0] <GHC.Base.String>_R))
+                   Main.evalAndPrint1
+                     `cast`
+                   (<GHC.Base.String>_R ->_R Sym (GHC.Types.N:IO[0] <()>_R))) -}
+349d65bcedebaffa112a5855395fe0c2
+  until_ ::
+    GHC.Base.Monad m =>
+    (a -> GHC.Types.Bool) -> m a -> (a -> m ()) -> m ()
+  {- Arity: 4, HasNoCafRefs,
+     Strictness: <S(LC(C(S))LLL),U(U,C(C1(U)),C(C1(U)),A,A)><L,C(U)><L,U><L,C(U)> -}
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: safe
+require own pkg trusted: False
+
